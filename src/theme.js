@@ -15,6 +15,10 @@ const theme = {
     normal: "400",
     bold: "700",
   },
+  appBar: {
+    backgroundColor: "#24292e",
+    textColor: "#ffffff",
+  },
 };
 
 export default theme;
