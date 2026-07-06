@@ -1,5 +1,6 @@
 import { Text } from "react-native";
 import { FlatList, View, StyleSheet } from "react-native";
+import RepositoryItem from "./RepositoryItem";
 
 const styles = StyleSheet.create({
   separator: {
@@ -52,50 +53,16 @@ const repositories = [
     reviewCount: 0,
     ownerAvatarUrl: "https://avatars3.githubusercontent.com/u/13142323?v=4",
   },
-  {
-    id: "react.native",
-    fullName: "reactnative",
-    description: "For building Mobile apps for both Ios and Android",
-    language: "ReactNative",
-    forksCount: 12345,
-    stargazersCount: 9876,
-    ratingAverage: 67,
-    reviewCount: 9,
-    ownerAvatarUrl: "https://avatars3.githubusercontent.com/u/13142323?v=4",
-  },
 ];
 
 const ItemSeparator = () => <View style={styles.separator} />;
-
-const Item = ({
-  fullName,
-  description,
-  language,
-  forksCount,
-  stargazersCount,
-  ratingAverage,
-  reviewCount,
-  ownerAvatarUrl,
-}) => (
-  <View>
-    <Text>Full Name: {fullName}</Text>
-    <Text>Description: {description}</Text>
-    <Text>Language: {language}</Text>
-    <Text>Stars: {stargazersCount}</Text>
-    <Text>Forks: {forksCount}</Text>
-    <Text>Reviews: {reviewCount}</Text>
-    <Text>Rating: {ratingAverage}</Text>
-  </View>
-);
 
 const RepositoryList = () => {
   return (
     <FlatList
       data={repositories}
       ItemSeparatorComponent={ItemSeparator}
-      renderItem={({ item }) => {
-        return <Item {...item} />;
-      }}
+      renderItem={({ item }) => <RepositoryItem {...item} />}
       keyExtractor={(item) => item.id}
     />
   );
