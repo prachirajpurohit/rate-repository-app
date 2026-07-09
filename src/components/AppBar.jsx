@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: Constants.statusBarHeight,
     backgroundColor: theme.appBar.backgroundColor,
-    padding: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 20,
   },
 });
 
@@ -15,6 +16,7 @@ const AppBar = () => {
   return (
     <View style={styles.container}>
       <AppBarTab title="Repositories" onPress={() => console.log("Pressed")} />
+      {/* <AppBarTab title="SignIn" onPress={() => console.log("Pressed")} /> */}
     </View>
   );
 };

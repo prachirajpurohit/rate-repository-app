@@ -6,7 +6,7 @@ const AppBarTab = ({ title, onPress }) => {
     <Pressable onPress={onPress}>
       <Text
         style={{
-          marginTop: 20,
+          marginTop: 12,
           color: theme.appBar.textColor,
           fontSize: theme.fontSizes.subheading,
           fontWeight: theme.fontWeights.bold,
