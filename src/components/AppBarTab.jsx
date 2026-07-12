@@ -1,9 +1,10 @@
 import { Pressable, Text } from "react-native";
 import theme from "../theme";
+import { Link } from "react-router-native";
 
-const AppBarTab = ({ title, onPress }) => {
+const AppBarTab = ({ title, to }) => {
   return (
-    <Pressable onPress={onPress}>
+    <Link to={to} component={Pressable}>
       <Text
         style={{
           marginTop: 12,
@@ -14,7 +15,7 @@ const AppBarTab = ({ title, onPress }) => {
       >
         {title}
       </Text>
-    </Pressable>
+    </Link>
   );
 };
 
