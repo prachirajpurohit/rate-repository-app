@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
 
 const AppBar = () => {
   return (
-    <View style={styles.container}> 
-      <ScrollView horizontal>
+    <View style={styles.container}>
+      <ScrollView horizontal contentContainerStyle={{ gap: 20 }}>
         <AppBarTab to="/" title="Repositories" />
         <AppBarTab to="/signin" title="Sign In" />
       </ScrollView>
