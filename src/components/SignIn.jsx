@@ -2,6 +2,23 @@ import * as yup from "yup";
 import { Formik } from "formik";
 import { View, TextInput, Button, Text } from "react-native";
 
+const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 10,
+  },
+  error: {
+    color: "#d73a4a",
+    marginBottom: 10,
+  },
+});
+
 const validationSchema = yup.object().shape({
   username: yup
     .string()
@@ -29,12 +46,13 @@ const SignIn = () => {
         errors,
         touched,
       }) => (
-        <View>
+        <View style={styles.container}>
           <TextInput
             onChangeText={handleChange("username")}
             onBlur={handleBlur("username")}
             value={values.username}
             placeholder="Username"
+            style={styles.input}
           />
           {touched.username && errors.username && (
             <Text style={{ color: "#d73a4a" }}>{errors.username}</Text>
@@ -46,9 +64,10 @@ const SignIn = () => {
             value={values.password}
             secureTextEntry
             placeholder="Password"
+            style={styles.input}
           />
           {touched.password && errors.password && (
-            <Text style={{ color: "#d73a4a" }}>{errors.password}</Text>
+            <Text style={styles.error}>{errors.password}</Text>
           )}
 
           <Button onPress={handleSubmit} title="Sign In" />
