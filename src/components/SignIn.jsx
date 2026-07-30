@@ -1,6 +1,6 @@
 import * as yup from "yup";
 import { Formik } from "formik";
-import { View, TextInput, Button, Text } from "react-native";
+import { View, TextInput, Button, Text, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {

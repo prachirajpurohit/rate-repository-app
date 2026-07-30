@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import React from "react";
 import theme from "../theme";
 
@@ -119,5 +119,3 @@ export default function RepositoryItem({
     </View>
   );
 }
-
-const styles = StyleSheet.create({});
