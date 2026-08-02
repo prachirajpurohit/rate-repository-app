@@ -29,7 +29,7 @@ export default function RepositoryItem({
           style={{
             flexShrink: 1,
             marginLeft: 12,
-            gap: 12,
+            gap: 8,
           }}
         >
           <Text
